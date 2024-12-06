@@ -1,6 +1,5 @@
 import streamlit as st
 
-
 # Title and Description
 st.title("Environmental Impact Calculator")
 st.write("Estimate your environmental impact based on daily activities and get actionable suggestions to reduce it. 🌍")
@@ -22,12 +21,12 @@ water_usage = st.slider("Water usage per day (gallons)", min_value=0, max_value=
 st.header("Your Environmental Impact")
 
 # Driving emissions calculation
-co2_per_gallon = 19.6  # Average CO₂ produced per gallon of gasoline (in pounds)
+co2_per_gallon = 19.6  # Average CO2 produced per gallon of gasoline 
 daily_gas_used = miles_driven / fuel_efficiency
 daily_co2_emissions = daily_gas_used * co2_per_gallon
 
 # Energy emissions calculation (average CO2 per kWh in the US)
-co2_per_kwh = 0.92  # Average pounds of CO₂ per kWh
+co2_per_kwh = 0.92  # Average pounds of CO2 per kWh
 daily_energy_emissions = electricity_usage * co2_per_kwh
 
 # Display Results
@@ -51,3 +50,5 @@ st.write("- Reduce water usage by installing low-flow fixtures and being mindful
 
 # Footer
 st.write("🌱 Small steps lead to big changes. Thank you for caring about the planet!")
+
+#python3 -m streamlit run environmental_impact_calculator.py
